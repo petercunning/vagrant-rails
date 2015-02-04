@@ -14,20 +14,11 @@ sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev li
 # SQLite, Git and Node.js
 sudo apt-get install -y libsqlite3-dev git nodejs
 
-# Qt and xvfb-run for Capybara Webkit
-sudo apt-get install -y libqtwebkit-dev xvfb
-
-# ImageMagick and Rmagick
-sudo apt-get install -y imagemagick libmagickwand-dev
-
 # Postgres
 sudo apt-get install -y postgresql-9.3 postgresql-server-dev-9.3 postgresql-contrib-9.3
 
-# Memcached
-sudo apt-get install -y memcached
+# mysql
 
-# Redis
-sudo apt-get install -y redis-server
 
 # setup rbenv and ruby-build
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
@@ -43,13 +34,6 @@ rbenv install 2.1.4
 rbenv global 2.1.4
 gem install bundler
 rbenv rehash
-
-# Phantomjs
-sudo wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2 -P /usr/local/share --quiet
-sudo tar xjf /usr/local/share/phantomjs-1.9.7-linux-x86_64.tar.bz2 -C /usr/local/share
-sudo ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
-sudo ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
-sudo ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
 
 # cleanup
 sudo apt-get clean
