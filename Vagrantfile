@@ -5,7 +5,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "phusion/ubuntu-14.04-amd64"
+  config.vm.box = "ubuntu/trusty64"
 
   # Forward rails server port to your host machine
   #
@@ -13,12 +13,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Install linux packages
   #
-  config.vm.provision :shell, path: "https://github.com/orendon/vagrant-rails/raw/master/script/vagrant_bootstrap.sh", privileged: false
+  config.vm.provision :shell, path: "https://github.com/petercunning/vagrant-rails/raw/master/script/vagrant_bootstrap.sh", privileged: false
 
   # Uncomment this line if you want to bundle install and setup/create database (optional)
   # The path: option accepts a script on your local filesystem in case you want to provide your own
   #
-  # config.vm.provision :shell, path: "https://github.com/orendon/vagrant-rails/raw/master/script/app_specifics.sh", privileged: false
+  # config.vm.provision :shell, path: "https://github.com/cunning/vagrant-rails/raw/master/script/app_specifics.sh", privileged: false
 
   # Use an specific IP address on your local network
   #
