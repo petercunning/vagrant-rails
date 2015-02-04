@@ -17,9 +17,6 @@ sudo apt-get install -y libsqlite3-dev git nodejs
 # Postgres
 sudo apt-get install -y postgresql-9.3 postgresql-server-dev-9.3 postgresql-contrib-9.3
 
-# mysql
-
-
 # setup rbenv and ruby-build
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
