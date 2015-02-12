@@ -9,7 +9,7 @@ echo 'gem: --no-rdoc --no-ri' >> ~/.gemrc
 
 # essentials
 sudo apt-get -y update
-sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev libcurl4-openssl-dev curl wget
+sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev libcurl4-openssl-dev curl wget libmysqlclient-dev
 
 # SQLite, Git and Node.js
 sudo apt-get install -y libsqlite3-dev git nodejs
