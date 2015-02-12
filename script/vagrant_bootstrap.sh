@@ -15,7 +15,7 @@ sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev li
 sudo apt-get install -y libsqlite3-dev git nodejs
 
 # Postgres
-sudo apt-get install -y postgresql-9.3 postgresql-server-dev-9.3 postgresql-contrib-9.3
+#sudo apt-get install -y postgresql-9.3 postgresql-server-dev-9.3 postgresql-contrib-9.3
 
 # setup rbenv and ruby-build
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
