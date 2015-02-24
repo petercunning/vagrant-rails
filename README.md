@@ -17,10 +17,17 @@ This box start with a basic Ubuntu 14.04 (trusty) based on phusion/ubuntu-14.04-
 ##Usage
 Just download `Vagrantfile` on the root folder on your app, and run vagrant from there
 ```shell
-wget https://github.com/orendon/vagrant-rails/raw/master/Vagrantfile
+wget https://github.com/petercunning/vagrant-rails/raw/master/Vagrantfile
 vagrant up
 vagrant ssh
 ```
+##VirtualBox Guest Additions 
+Take the pain out of incorrect version 
+
+vagrant plugin install vagrant-vbguest
+
+refer to https://github.com/dotless-de/vagrant-vbguest
+
 
 If needed, you can customize `config.vm.provision` script according to your app specifics, in such case just run `vagrant provision` in order to reload all scripts.
 
