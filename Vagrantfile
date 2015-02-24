@@ -9,7 +9,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Forward rails server port to your host machine
   #
-  #config.vm.network "forwarded_port", guest: 3000, host: 3001
+  config.vm.network "forwarded_port", guest: 3000, host: 4000 ,host_ip: "127.0.0.1"
   #config.vm.network :forwarded_port, guest: 3000, host: 1234
 
   # Install linux packages
@@ -27,7 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Share additional folders to the guest VM
   #
-  # config.vm.synced_folder "../folder_on_your_host_machine", "/folder_on_vagrant_vm"
+  config.vm.synced_folder "." , "/vagrant",:mount_options => ["dmode=777","fmode=666"]
 
   # Provider-specific configuration so you can fine-tune various
   # Example for VirtualBox:
