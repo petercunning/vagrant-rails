@@ -15,3 +15,4 @@ cp -R config/database.sample.yml config/database.yml
 rake db:create
 rake db:migrate
 rake db:seed
+spring binstub --all
