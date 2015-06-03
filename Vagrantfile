@@ -6,10 +6,16 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/precise32"
+  
+  config.vm.provider "virtualbox" do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "6144"]
+    vb.cpus = 2 
+  end
 
   # Forward rails server port to your host machine
   #
   config.vm.network "forwarded_port", guest: 3000, host: 4000 ,host_ip: "127.0.0.1"
+  config.vm.network "forwarded_port", guest: 3001, host: 4001 ,host_ip: "127.0.0.1"
   #config.vm.network :forwarded_port, guest: 3000, host: 1234
 
   # Install linux packages
@@ -36,9 +42,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   #   # Don't boot with headless mode
   #   vb.gui = true
   #
-  #   # Use VBoxManage to customize the VM. For example to change memory:
-  #   vb.customize ["modifyvm", :id, "--memory", "1024"]
-  # end
 
   #config.vm.provision :chef_solo do |chef|
    #chef.add_recipe "apt"
