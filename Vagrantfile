@@ -8,8 +8,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/precise32"
   
   config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "6144"]
-    vb.cpus = 2 
+    vb.customize ["modifyvm", :id, "--memory", "10884"]
+    vb.cpus = 4 
   end
 
   # Forward rails server port to your host machine
