@@ -6,10 +6,10 @@ VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/precise32"
-  
+
   config.vm.provider "virtualbox" do |vb|
     vb.customize ["modifyvm", :id, "--memory", "10884"]
-    vb.cpus = 4 
+    vb.cpus = 4
   end
 
   # Forward rails server port to your host machine
@@ -34,7 +34,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # Share additional folders to the guest VM
   #
   config.vm.synced_folder "." , "/vagrant",:mount_options => ["dmode=777","fmode=666"]
-
+  config.vm.synced_folder "." , "/vagrant",:mount_options => ["dmode=777","fmode=666"]
+  config.vm.synced_folder "../code" , "/home/vagrant/code",:mount_options => ["dmode=777","fmode=666"]
   # Provider-specific configuration so you can fine-tune various
   # Example for VirtualBox:
   #
