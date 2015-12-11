@@ -21,6 +21,9 @@ sudo apt-get install -y postgresql-9.3 postgresql-server-dev-9.3 postgresql-cont
 #setup Heroku toolbelt
 wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
+#setup oh-my-zsh
+sudo sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 # setup rbenv and ruby-build
 git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
 echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
