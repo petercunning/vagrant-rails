@@ -9,7 +9,8 @@ echo 'gem: --no-rdoc --no-ri' >> ~/.gemrc
 
 # essentials
 sudo apt-get -y update
-sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev libcurl4-openssl-dev curl wget libmysqlclient-dev phantomjs
+sudo apt-get install -y autoconf bison build-essential libssl-dev libyaml-dev libreadline6 libreadline6-dev zlib1g zlib1g-dev libcurl4-openssl-dev curl wget libmysqlclient-dev phantomjs zsh sudo apt-get install qt4-dev-tools
+
 
 # SQLite, Git and Node.js
 sudo apt-get install -y libsqlite3-dev git nodejs
@@ -34,8 +35,8 @@ export RBENV_ROOT="${HOME}/.rbenv"
 export PATH="${RBENV_ROOT}/bin:${PATH}"
 export PATH="${RBENV_ROOT}/shims:${PATH}"
 #rbenv install 2.1.4
-rbenv install 2.2.0
-rbenv global 2.2.0
+rbenv install 2.2.3
+rbenv global 2.2.3
 rbenv install 2.1.7
 gem install bundler
 rbenv rehash
