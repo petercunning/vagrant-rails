@@ -18,14 +18,21 @@ sudo apt-get install -y libsqlite3-dev git nodejs phantomjs
 # mysql
 sudo apt-get install -y libmysqlclient-dev 
 
+# python 
+sudo apt-get install python-pip python-dev
+
 # Postgres
-sudo apt-get install -y postgresql-9.3 postgresql-server-dev-9.3 postgresql-contrib-9.3
+sudo apt-get install -y postgresql postgresql-client postgresql-contrib libpq-dev
+	# creating user
+	#sudo -u postgres psql -c "CREATE USER vagrant WITH PASSWORD 'password';"
+	# creating new db if needed .. might need 2 (dev/test)
+	#createdb -U vagrant development
 
 #setup Zsh 
 sudo apt-get install -y zsh qt4-dev-tools
 
 #setup oh-my-zsh
-sudo sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # setup Heroku toolbelt
 wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh

@@ -8,14 +8,14 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "ubuntu/precise32"
 
   config.vm.provider "virtualbox" do |vb|
-    vb.customize ["modifyvm", :id, "--memory", "10884"]
-    vb.cpus = 4
+    vb.customize ["modifyvm", :id, "--memory", "3072"]
+    vb.cpus = 2 
   end
 
   # Forward rails server port to your host machine
   #
-  config.vm.network "forwarded_port", guest: 3000, host: 4000 ,host_ip: "127.0.0.1"
-  config.vm.network "forwarded_port", guest: 3001, host: 4001 ,host_ip: "127.0.0.1"
+  #config.vm.network "forwarded_port", guest: 3000, host: 3000 ,host_ip: "127.0.0.1"
+  #config.vm.network "forwarded_port", guest: 3001, host: 4001 ,host_ip: "127.0.0.1"
   #config.vm.network :forwarded_port, guest: 3000, host: 1234
 
   # Install linux packages
@@ -29,13 +29,15 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
   # Use an specific IP address on your local network
   #
-  # config.vm.network "private_network", ip: "192.168.33.10"
+  config.vm.network :public_network
+  
+  # , ip: "192.168.33.10"
 
   # Share additional folders to the guest VM
   #
   config.vm.synced_folder "." , "/vagrant",:mount_options => ["dmode=777","fmode=666"]
   config.vm.synced_folder "." , "/vagrant",:mount_options => ["dmode=777","fmode=666"]
-  config.vm.synced_folder "../code" , "/home/vagrant/code",:mount_options => ["dmode=777","fmode=666"]
+  config.vm.synced_folder "../../../code" , "/home/vagrant/code",:mount_options => ["dmode=777","fmode=666"]
   # Provider-specific configuration so you can fine-tune various
   # Example for VirtualBox:
   #
